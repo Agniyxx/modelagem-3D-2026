@@ -1,4 +1,38 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <title>Modelagem 3D Trabalho final</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+</head>
+<body style="margin:0; overflow:hidden;">
+<a-scene
+    vr-mode-ui="enabled:false"
+    embedded
+    arjs="debugUIEnabled:false">
+    <a-assets>
+        <a-asset-item
+            id="modelo"
+            src="suzane.glb">
+        </a-asset-item>
+    </a-assets>
+    <a-marker
+        type="pattern"
+        url="pattern-olho.patt">
+        <a-entity
+            gltf-model="#modelo"
+            scale="0.01 0.01 0.01"
+            position="0 0 0"
+            rotation="0 0 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear">
+        </a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
+</a-scene>
+</body>
+</html>
+
+<!-- <html>
   <head>
     <title>Terceira experiência de RA usando AR.js e A-frame com modelo 3D e marcador</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
@@ -20,7 +54,7 @@
       <a-entity camera></a-entity>
     </a-scene>
   </body>
-</html>
+</html> --> -->
 
 <!-- - <html> --> -->
   <!-- <head>
@@ -36,7 +70,7 @@
       <a-entity camera></a-entity>
     </a-scene>
   </body>
-</html> --> -->
+</html> -->
 
 <!-- <html>
   <head>
